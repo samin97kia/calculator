@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js" ></script>
+
+<style>
+    
+</style>
+
+
+</head>
+<body>
+
+    <div class="row justify-content-center">
+        <div class="col-4">
+<input id="g" class="form-control mt-3" style="text-align:center ; " type="text">
+        </div>
+
+    </div>
+<br>
+<br>
+
+
+<div class="row justify-content-center">
+<div  class="col-1"><button class="btn btn-warning form-control" onclick="show(1)" >1</button> </div>
+<div class="col-1"><button class="btn btn-warning form-control" onclick="show(2)" >2</button> </div>
+<div class="col-1"><button class="btn btn-warning form-control" onclick="show(3)"  >3</button> </div>
+</div>
+
+<div class="row justify-content-center mt-3">
+<div class="col-1"><button class="btn btn-warning form-control" onclick="show(4)"  >4</button></div>
+<div class="col-1"><button class="btn btn-warning form-control" onclick="show(5)" >5</button></div>
+<div class="col-1"><button class="btn btn-warning form-control" onclick="show(6)" >6</button></div>
+</div>
+
+<div class="row justify-content-center mt-3">
+    <div class="col-1"><button class="btn btn-warning form-control" onclick="show(7)"  >7</button></div>
+    <div class="col-1"><button class="btn btn-warning form-control" onclick="show(8)" >8</button></div>
+    <div class="col-1"><button class="btn btn-warning form-control" onclick="show(9)" >9</button></div>
+    </div>
+
+
+    <div class="row justify-content-center mt-3">
+        <div class="col-1"><button class="btn btn-warning form-control" onclick="sum()"  >+</button></div>
+        <div class="col-1"><button class="btn btn-warning form-control" onclick="show(0)" >0</button></div>
+        <div class="col-1"><button class="btn btn-warning form-control" onclick="minus()" >-</button></div>
+        
+        
+        </div>
+
+<div class="row justify-content-center mt-3" >
+
+    <div class="col-1" ><button class="btn btn-warning form-control" onclick="zarb()" >*</button></div>
+    <div class="col-1" ><button class="btn btn-warning form-control" onclick="taghsim()" >/</button></div>
+
+    <div class="col-1"><button class="btn btn-warning form-control" onclick="result()" >=</button></div>
+</div>
+
+
+
+
+
+
+<script>
+    
+var a=0;
+
+status ;
+function show(x) {
+    document.getElementById('g').value=document.getElementById('g').value+x
+
+    
+}
+function sum() {
+    a=parseInt(document.getElementById('g').value);
+    document.getElementById('g').value='';
+    status='+'
+
+}
+
+function minus() {
+     a=parseInt(document.getElementById('g').value);
+    document.getElementById('g').value='';
+    status='-'
+}
+
+function zarb() {
+     a=parseInt(document.getElementById('g').value);
+    document.getElementById('g').value='';
+    status='*'
+}
+function taghsim() {
+     a=parseInt(document.getElementById('g').value);
+    document.getElementById('g').value='';
+    status='/'
+}
+
+
+
+
+function result() {
+    
+    var b=parseInt(document.getElementById('g').value);
+    
+
+if (status=='+') {
+    document.getElementById('g').value=a+b;
+    
+}
+
+    if (status=='-') {
+    document.getElementById('g').value=a-b;
+
+
+}
+if (status=='*') {
+    document.getElementById('g').value=a*b;
+}
+if (status=='/') {
+    document.getElementById('g').value=a/b;
+}
+}
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
